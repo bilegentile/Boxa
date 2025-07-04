@@ -16,11 +16,15 @@ struct ContentView: View {
             ScrollView {
                 LazyVGrid(columns: columns) {
                     ForEach($viewModel.cells) { cell in
-                        CellView(cell: cell)
-                            .padding()
+                        NavigationLink {
+                            CellDetailView(cell: cell)
+                        } label: {
+                            CellView(cell: cell)
+                                .padding()
+                        }
+                        .buttonStyle(.plain)
                     }
                 }
-                .padding()
             }
             .navigationTitle("Boxas")
         }

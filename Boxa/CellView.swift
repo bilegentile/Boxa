@@ -13,8 +13,9 @@ struct CellView: View {
     var body: some View {
         ZStack {
             RoundedRectangle(cornerRadius: 20)
-                .foregroundStyle(Color.random)
+                .foregroundStyle(cell.color)
                 .opacity(colorScheme == .dark ? 0.6 : 0.2)
+                .shadow(radius: 8)
             VStack {
                 HStack {
                     Spacer()
