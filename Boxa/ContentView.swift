@@ -8,14 +8,26 @@
 import SwiftUI
 
 struct ContentView: View {
+    @State private var viewModel = CellViewModel()
+    
+    let columns = [GridItem(.flexible()), GridItem(.flexible())]
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack {
+            ScrollView {
+                LazyVGrid(columns: columns) {
+                    ForEach($viewModel.cells) { cell in
+                        CellView(cell: cell)
+                            .padding()
+                    }
+                }
+                .padding()
+            }
+            .navigationTitle("Boxas")
         }
-        .padding()
+        .onAppear {
+            //This function generates random cells for testing purposes
+            viewModel.createSampleData()
+        }
     }
 }
 

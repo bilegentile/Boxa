@@ -1,0 +1,46 @@
+//
+//  CellView.swift
+//  Boxa
+//
+//  Created by Beniamino Gentile on 04/07/25.
+//
+
+import SwiftUI
+
+struct CellView: View {
+    @Binding var cell: Cell
+    @Environment(\.colorScheme) var colorScheme
+    var body: some View {
+        ZStack {
+            RoundedRectangle(cornerRadius: 20)
+                .foregroundStyle(Color.random)
+                .opacity(colorScheme == .dark ? 0.6 : 0.2)
+            VStack {
+                HStack {
+                    Spacer()
+                    Button {
+                        withAnimation {
+                            cell.isFavorite.toggle()
+                        }
+                    } label: {
+                        Image(systemName: cell.isFavorite ? "heart.fill" : "heart")
+                            .foregroundStyle(.red)
+                            .font(.system(size: 30))
+                    }
+                    .padding()
+                }
+                Spacer()
+                Text(cell.title)
+                    .font(.title2.bold())
+                    .multilineTextAlignment(.center)
+                    .padding()
+                Spacer()
+            }
+        }
+    }
+}
+
+#Preview {
+    @Previewable @State var cell = Cell.example
+    CellView(cell: $cell)
+}
