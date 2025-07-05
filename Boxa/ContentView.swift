@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @State private var viewModel = CellViewModel()
+    @State private var viewModel = ViewModel()
     
     let columns = [GridItem(.flexible()), GridItem(.flexible())]
     var body: some View {

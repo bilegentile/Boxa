@@ -23,6 +23,7 @@ struct CellDetailView: View {
                 } label: {
                     Image(systemName: cell.isFavorite ? "heart.fill" : "heart")
                         .foregroundStyle(.red)
+                        .accessibilityLabel(cell.isFavorite ? "Remove from favorites" : "Add to favorites")
                 }
             }
         }
