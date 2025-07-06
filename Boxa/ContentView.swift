@@ -20,7 +20,6 @@ struct ContentView: View {
                             CellDetailView(cell: cell)
                         } label: {
                             CellView(cell: cell)
-                                .padding()
                         }
                         .buttonStyle(.plain)
                     }

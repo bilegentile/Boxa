@@ -9,10 +9,15 @@ import SwiftUI
 
 struct CellDetailView: View {
     @Binding var cell: Cell
+    @Environment(\.colorScheme) var colorScheme
     var body: some View {
-        VStack {
-            Text(cell.title)
-                .font(.title)
+        ZStack {
+            cell.color
+                .opacity(colorScheme == .dark ? 0.6 : 0.2)
+            VStack {
+                Text(cell.title)
+                    .font(.title)
+            }
         }
         .toolbar {
             ToolbarItem(placement: .primaryAction) {

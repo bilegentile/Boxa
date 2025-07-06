@@ -6,8 +6,19 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXContainerItemProxy section */
+		58AA8E222E1ABF2B00AFBC89 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 58067CD82E1733F7008FF454 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 58067CDF2E1733F7008FF454;
+			remoteInfo = Boxa;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		58067CE02E1733F7008FF454 /* Boxa.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Boxa.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		58AA8E1E2E1ABF2B00AFBC89 /* BoxaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BoxaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -16,10 +27,22 @@
 			path = Boxa;
 			sourceTree = "<group>";
 		};
+		58AA8E1F2E1ABF2B00AFBC89 /* BoxaTests */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = BoxaTests;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		58067CDD2E1733F7008FF454 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		58AA8E1B2E1ABF2B00AFBC89 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -33,6 +56,7 @@
 			isa = PBXGroup;
 			children = (
 				58067CE22E1733F7008FF454 /* Boxa */,
+				58AA8E1F2E1ABF2B00AFBC89 /* BoxaTests */,
 				58067CE12E1733F7008FF454 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -41,6 +65,7 @@
 			isa = PBXGroup;
 			children = (
 				58067CE02E1733F7008FF454 /* Boxa.app */,
+				58AA8E1E2E1ABF2B00AFBC89 /* BoxaTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -70,6 +95,29 @@
 			productReference = 58067CE02E1733F7008FF454 /* Boxa.app */;
 			productType = "com.apple.product-type.application";
 		};
+		58AA8E1D2E1ABF2B00AFBC89 /* BoxaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 58AA8E262E1ABF2B00AFBC89 /* Build configuration list for PBXNativeTarget "BoxaTests" */;
+			buildPhases = (
+				58AA8E1A2E1ABF2B00AFBC89 /* Sources */,
+				58AA8E1B2E1ABF2B00AFBC89 /* Frameworks */,
+				58AA8E1C2E1ABF2B00AFBC89 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				58AA8E232E1ABF2B00AFBC89 /* PBXTargetDependency */,
+			);
+			fileSystemSynchronizedGroups = (
+				58AA8E1F2E1ABF2B00AFBC89 /* BoxaTests */,
+			);
+			name = BoxaTests;
+			packageProductDependencies = (
+			);
+			productName = BoxaTests;
+			productReference = 58AA8E1E2E1ABF2B00AFBC89 /* BoxaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -82,6 +130,10 @@
 				TargetAttributes = {
 					58067CDF2E1733F7008FF454 = {
 						CreatedOnToolsVersion = 16.4;
+					};
+					58AA8E1D2E1ABF2B00AFBC89 = {
+						CreatedOnToolsVersion = 16.4;
+						TestTargetID = 58067CDF2E1733F7008FF454;
 					};
 				};
 			};
@@ -100,12 +152,20 @@
 			projectRoot = "";
 			targets = (
 				58067CDF2E1733F7008FF454 /* Boxa */,
+				58AA8E1D2E1ABF2B00AFBC89 /* BoxaTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
 		58067CDE2E1733F7008FF454 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		58AA8E1C2E1ABF2B00AFBC89 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -122,7 +182,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		58AA8E1A2E1ABF2B00AFBC89 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		58AA8E232E1ABF2B00AFBC89 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 58067CDF2E1733F7008FF454 /* Boxa */;
+			targetProxy = 58AA8E222E1ABF2B00AFBC89 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		58067CE92E1733F8008FF454 /* Debug */ = {
@@ -304,6 +379,42 @@
 			};
 			name = Release;
 		};
+		58AA8E242E1ABF2B00AFBC89 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B9N492SM99;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.beniaminogentile.ios.BoxaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Boxa.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Boxa";
+			};
+			name = Debug;
+		};
+		58AA8E252E1ABF2B00AFBC89 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B9N492SM99;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.beniaminogentile.ios.BoxaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Boxa.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Boxa";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -321,6 +432,15 @@
 			buildConfigurations = (
 				58067CEC2E1733F8008FF454 /* Debug */,
 				58067CED2E1733F8008FF454 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		58AA8E262E1ABF2B00AFBC89 /* Build configuration list for PBXNativeTarget "BoxaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				58AA8E242E1ABF2B00AFBC89 /* Debug */,
+				58AA8E252E1ABF2B00AFBC89 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -7,6 +7,17 @@
 
 import SwiftUI
 
+/**
+## Accessibility Modifiers
+A set of accessibility modifiers on this View ensures that the entire cell acts as a single accessible element, clearly announcing the content, favorite status, and purpose of the view.
+
+- Combines all child elements into a single accessibility element to avoid redundant or repeated announcements.
+- Sets a descriptive `accessibilityLabel` based on the cell title, and an `accessibilityValue` reflecting the current favorite status (e.g., "Favorite" or "Not Favorite").
+- Adds an `accessibilityHint` to guide users, explaining that a standard double-tap opens the detail view and a two-finger double-tap (Magic Tap) toggles the favorite status.
+- Declares the view as a button using `.accessibilityAddTraits(.isButton)`, aligning it with common VoiceOver interaction models.
+- Implements a `.accessibilityAction(.magicTap)` to let VoiceOver users toggle the favorite state from anywhere on the cell using the Magic Tap gesture, improving discoverability and ease of use.
+*/
+
 struct CellView: View {
     @Binding var cell: Cell
     @Environment(\.colorScheme) var colorScheme
@@ -16,7 +27,7 @@ struct CellView: View {
                 RoundedRectangle(cornerRadius: 20)
                     .foregroundStyle(cell.color)
                     .opacity(colorScheme == .dark ? 0.6 : 0.2)
-                    .shadow(radius: 8)
+                    .shadow(color: colorScheme == .dark ? .white : .black, radius: 8)
                 VStack {
                     HStack {
                         Spacer()
@@ -40,6 +51,7 @@ struct CellView: View {
                     Spacer()
                 }
             }
+            .padding()
         }
         .accessibilityElement(children: .combine)
         .accessibilityLabel(cell.title)
